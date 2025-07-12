@@ -3,164 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pragnya</title>
+    <title>Pragnya's Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to right, #ff9a9e, #fad0c4);
-        text-align: center;
-        padding: 20px;
-    }
-    .resume {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        width: 80%;
-        margin: auto;
-        text-align: left;
-    }
-    h1 {
-        color: #ff4081;
-        text-align: center;
-    }
-    h2 {
-        color: #ff6363;
-        border-bottom: 2px solid #ff6363;
-        padding-bottom: 5px;
-    }
-    h3 {
-        color: #ff6363;
-        padding-bottom: 5px;
-    }
-    p, li {
-        color: #333;
-        font-size: 16px;
-        line-height: 1.6;
-    }
-    ul {
-        list-style-type: square;
-        padding-left: 20px;
-    }
-    .section {
-        margin-bottom: 20px;
-    }
-    .profile-pic {
-        display: block;
-        margin: auto;
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #ff6363;
-    }
-
-    @media (max-width: 600px) {
+        body {
+            font-family: 'Montserrat', sans-serif; /* More modern font */
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+            text-align: center;
+            padding: 20px;
+        }
         .resume {
-            width: 95%;
-            padding: 15px;
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            padding: 30px;
+            border-radius: 15px;
+            width: 85%; /* Slightly wider */
+            margin: auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            text-align: left;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
         }
-
+        .resume:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
         h1 {
-            font-size: 24px;
+            color: #fff; /* White heading */
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow */
+            font-size: 2.5rem; /* Larger heading */
         }
-
         h2 {
-            font-size: 18px;
+            color: #4CAF50; /* Green heading */
+            border-bottom: 3px solid #4CAF50; /* Green border */
+            padding-bottom: 10px;
+            margin-top: 25px;
+            font-size: 1.8rem; /* Larger subheading */
         }
-
         p, li {
-            font-size: 14px;
+            color: #333;
+            font-size: 1.1rem; /* Slightly larger text */
+            line-height: 1.7; /* Increased line height */
         }
-
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .section {
+            margin-bottom: 30px; /* Increased section spacing */
+        }
         .profile-pic {
-            width: 120px;
-            height: 120px;
+            display: block;
+            margin: 20px auto;
+            width: 200px; /* Larger profile picture */
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #4CAF50; /* Green border */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
         }
-    }
-</style>
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
 
+        /* Bootstrap enhancements */
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Further increased max-width */
+            margin: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .col-md-6 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .col-12{
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent card */
+            border-radius: 15px; /* More rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px; /* Increased card padding */
+            margin-bottom: 25px; /* Increased card margin */
+            transition: background-color 0.3s ease; /* Smooth transition */
+            border: none; /* Remove default border */
+        }
+        .card:hover {
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly lighter on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow on hover */
+        }
+
+        .card-title {
+            color: #4CAF50; /* Green title */
+            margin-bottom: 1.25rem; /* Increased margin */
+            border-bottom: 3px solid #4CAF50; /* Green border */
+            padding-bottom: 10px;
+            font-size: 1.5rem; /* Larger title */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .list-group {
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 0.75rem 1rem; /* Increased padding */
+            margin-bottom: -1px;
+            background-color: transparent; /* Transparent background */
+            border: none; /* Remove border */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle bottom border */
+        }
+        .list-group-item:first-child {
+            border-top-left-radius: 0.5rem; /* More rounded corners */
+            border-top-right-radius: 0.5rem;
+        }
+        .list-group-item:last-child {
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            border-bottom: none; /* Remove bottom border for last item */
+        }
+        .list-group-item:hover, .list-group-item:focus {
+            background-color: rgba(255, 255, 255, 0.8); /* Slight background on hover */
+            color: #333;
+            text-decoration: none;
+            transform: translateX(4px); /* Add a slight horizontal shift on hover */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* New Color Styles */
+        .bg-primary {
+            background-color: #4CAF50 !important; /* Green primary color */
+            color: #fff;
+        }
+        .bg-secondary {
+            background-color: #e0f7fa !important; /* Light cyan secondary */
+            color: #343a40;
+        }
+        .text-primary {
+            color: #4CAF50 !important;
+        }
+        .text-secondary {
+            color: #00897b !important; /* Darker cyan */
+        }
+        .card-accent-primary {
+            border-left: 4px solid #4CAF50;
+        }
+        .card-accent-secondary {
+            border-left: 4px solid #00897b;
+        }
+        .list-group-item-primary {
+            background-color: #e6eeea; /* Very light green */
+            color: #006400; /* Darker green */
+        }
+        .list-group-item-secondary {
+            background-color: #b2ebf2; /* Lighter cyan */
+            color: #004d40; /* Darker cyan */
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+    </style>
 </head>
 <body>
-    
-    <div class="resume">
-        <h1>PRAGNYA S</h1>
-        <p style="text-align: center; font-size: 18px;"><strong>B.Tech - Engineering Student</strong></p>
-        <img src="pandduuuuu.jpeg" alt="Pandu's Photo" class="profile-pic">
-        
-        <div class="section">
-            <h2>About me</h2>
-            <p>I am persuing B.Tech CSE (AI) in Amrita Vishwa Vidyapeetham, Amritapuri Campus. I am passionate about problem solving and coding. I am learning Carnatic Music.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>B.Tech in Engineering</strong></p>
-            <p>Amrita Vishwa Vidyapeetham, Amritapuri [2024-28 batch] [Present 2025]</p>
-            <a href="mailto:pragnya.swaminathan@email.com">My Email</a>
-        </div>
-        
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming: Java (learning), C, C++ (basic), HTML & CSS basics, MATLAB</li>
-                <li>Software: Chrome (default browser), ASUS VivoBook laptop (Windows), Realme Narzo smartphone</li>
-                <li>Interests: AI ethics, coding, optimization, UI designing, competitive programming</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>AI Ethics Presentation (Based on IEEE paper "An Overview of Artificial Intelligence Ethics")</li>
-                <li>MATLAB coding projects</li>
-                <li>Java linked list implementations</li>
-                <li>Minor curriculum-based projects</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Experience</h2>
-            <ul>
-                <li>CP in CodeChef and Codeforces</li>
-                <li>Infosys workshop on GenAI and Applications</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Certifications</h2>
-            <p>GenAI and its Applications (Infosys)</p>
-        </div>
-        
-        <div class="section">
-            <h2>Hobbies & Interests</h2>
-            <ul>
-                <li>Singing and listening to music</li>
-                <li>Travelling</li>
-                <li>Drawing and painting</li>
-                <li>Numerology, zodiac signs, etc.</li>
-                <li>Technology and programming</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Languages</h2>
-            <p>English, Tamil, Hindi, Malayalam</p>
-        </div>
-        <h2></h2>
+    <div class="container">
+        <div class="resume">
+            <h1 class="text-center bg-primary rounded p-3">PRAGNYA</h1>
+            <p class="text-center text-secondary" style="font-size: 1.2rem;"><strong>B.Tech - Engineering Student</strong></p>
+            <div class="text-center">
+                 <img src="C:\Users\pragn\OneDrive\Desktop\Desktop\Pragnya\UID s2\pandduuuuu.jpeg" alt="Pandu's Photo" class="profile-pic">
+            </div>
 
-        <div>
-        <h3>My C Programs: </h3>
-        <a href="https://github.com/pragnyasg/pragnyasg.github.io/blob/main/cprog/index.html">here</a>
-        </div>
-        <div>
-        <h3>My OPPs Programs: </h3>
-        <a href="https://github.com/pragnyasg/pragnyasg.github.io/blob/main/oops/index.html">here</a>
-        </div>
-        <div>
-        <h3>My Data Strictures Implementations: </h3>
-        <a href="https://github.com/pragnyasg/pragnyasg.github.io/blob/main/DSA/index.html">here</a>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-accent-primary">
+                        <h2 class="card-title text-primary">Objective</h2>
+                        <p>A dedicated first-year B.Tech engineering student with a keen interest in programming and technology, eager to learn and grow in the field.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-accent-secondary">
+                        <h2 class="card-title text-secondary">Education</h2>
+                        <p><strong>B.Tech in Engineering</strong></p>
+                        <p>Amrita Vishwa Vidyapeetham, Amritapuri [2024-28 batch] [Present 2025]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-accent-primary">
+                        <h2 class="card-title text-primary">Skills</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-primary">Programming: MATLAB, Python (learning), Java (learning, linked lists), C, C++ (basic), HTML & CSS basics</li>
+                            <li class="list-group-item list-group-item-primary">Software: Chrome (default browser), ASUS VivoBook laptop (Windows), Realme Narzo smartphone</li>
+                            <li class="list-group-item list-group-item-primary">Interests: AI ethics, coding, optimization, UI designing, competitive programming</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-accent-secondary">
+                        <h2 class="card-title text-secondary">Projects</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-secondary">AI Ethics Presentation (Based on IEEE paper "An Overview of Artificial Intelligence Ethics")</li>
+                            <li class="list-group-item list-group-item-secondary">MATLAB coding projects</li>
+                            <li class="list-group-item list-group-item-secondary">Java linked list implementations</li>
+                            <li class="list-group-item list-group-item-secondary">Minor curriculum-based projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-accent-primary">
+                        <h2 class="card-title text-primary">Experience</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-primary">CP in CodeChef and Codeforces</li>
+                            <li class="list-group-item list-group-item-primary">Infosys workshop on GenAI and Applications</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-accent-secondary">
+                        <h2 class="card-title text-secondary">Certifications</h2>
+                        <p>GenAI and its Applications (Infosys)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-accent-primary">
+                        <h2 class="card-title text-primary">Hobbies &amp; Interests</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-primary">Singing and listening to music</li>
+                            <li class="list-group-item list-group-item-primary">Travelling</li>
+                            <li class="list-group-item list-group-item-primary">Drawing and painting</li>
+                            <li class="list-group-item list-group-item-primary">Numerology, zodiac signs, etc.</li>
+                            <li class="list-group-item list-group-item-primary">Technology and programming</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-accent-secondary">
+                        <h2 class="card-title text-secondary">Languages</h2>
+                        <p>English, Tamil, Hindi, Malayalam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                 <button class="btn btn-primary">Download Resume</button>
+            </div>
         </div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1nqEdZx9xEoohEzPCc4oQv5y2D1kGjHaWuRjz2Nn1/10" crossorigin="anonymous"></script>
 </body>
 </html>
